@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.notifications.NotificationsFragment">
+
+    <TextView
+        android:id="@+id/notification_totalmoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="总累计：xxxxxx.xx元"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        />
+
+    <Button
+        android:id="@+id/notification_btn_addstyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_below="@id/notification_totalmoney"
+        android:background="@drawable/button"
+        android:textColor="@color/white"
+        android:text="添加一个新款式"
+        android:textSize="18sp"
+        />
+
+    <ListView
+        android:id="@+id/notification_lv_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notification_btn_addstyle"
+        android:scrollbars="none"
+        android:background="@drawable/shape"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="10dp"
+        android:elevation="3dp"
+        />
+
+</RelativeLayout>

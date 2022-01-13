@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:padding="20dp">
+
+        <EditText
+            android:id="@+id/add_record_dialog_etv_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="数量"
+            android:textSize="18sp"
+            android:inputType="number"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+            <EditText
+                android:id="@+id/add_record_dialog_etv_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="年"
+                android:textSize="18sp"
+                android:inputType="number"
+                />
+            <EditText
+                android:id="@+id/add_record_dialog_etv_month"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="月"
+                android:textSize="18sp"
+                android:layout_marginLeft="5dp"
+                android:inputType="number"
+                />
+            <EditText
+                android:id="@+id/add_record_dialog_etv_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="日"
+                android:textSize="18sp"
+                android:layout_marginLeft="5dp"
+                android:inputType="number"
+                />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/add_record_dialog_etv_remark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="备注(可以不填)"
+            android:textSize="18sp"
+            android:layout_marginTop="5dp"
+            />
+
+        <Button
+            android:id="@+id/add_record_dialog_btn_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="确认添加"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:background="@drawable/button"
+            android:layout_marginTop="5dp"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

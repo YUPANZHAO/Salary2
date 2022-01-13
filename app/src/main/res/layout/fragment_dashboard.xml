@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.dashboard.DashboardFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="40dp"
+        android:padding="20dp"
+        android:background="@drawable/shape"
+        android:elevation="5dp">
+
+        <EditText
+            android:id="@+id/dashboard_etv_stylename"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="款式"
+            android:textSize="18sp"
+            />
+
+        <EditText
+            android:id="@+id/dashboard_etv_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="数量"
+            android:textSize="18sp"
+            android:layout_marginTop="5dp"
+            android:inputType="number"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+            <EditText
+                android:id="@+id/dashboard_etv_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="年"
+                android:textSize="18sp"
+                android:inputType="number"
+                />
+            <EditText
+                android:id="@+id/dashboard_etv_month"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="月"
+                android:textSize="18sp"
+                android:layout_marginLeft="5dp"
+                android:inputType="number"
+                />
+            <EditText
+                android:id="@+id/dashboard_etv_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="日"
+                android:textSize="18sp"
+                android:layout_marginLeft="5dp"
+                android:inputType="number"
+                />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/dashboard_etv_remark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="备注(可以不填)"
+            android:textSize="18sp"
+            android:layout_marginTop="5dp"
+            />
+
+        <Button
+            android:id="@+id/dashboard_btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="确认提交"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:background="@drawable/button"
+            android:layout_marginTop="5dp"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
