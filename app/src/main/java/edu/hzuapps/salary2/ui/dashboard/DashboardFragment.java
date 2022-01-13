@@ -1,13 +1,16 @@
 package edu.hzuapps.salary2.ui.dashboard;
 
 import android.content.ContentValues;
+import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -24,8 +27,11 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import edu.hzuapps.salary2.KeyboardUtils;
 import edu.hzuapps.salary2.MyDBOpenHelper;
 import edu.hzuapps.salary2.R;
+
+import static androidx.core.content.ContextCompat.getSystemService;
 
 public class DashboardFragment extends Fragment {
 
@@ -104,6 +110,13 @@ public class DashboardFragment extends Fragment {
                     Toast.makeText(root.getContext(), "提交失败!", Toast.LENGTH_LONG).show();
                 }else {
                     Toast.makeText(root.getContext(), "提交成功!", Toast.LENGTH_LONG).show();
+                    etv_stylename.setText("");
+                    etv_number.setText("");
+                    etv_year.setText("");
+                    etv_month.setText("");
+                    etv_day.setText("");
+                    etv_remark.setText("");
+                    KeyboardUtils.hideKeyboard(getActivity());
                 }
             }
         });
