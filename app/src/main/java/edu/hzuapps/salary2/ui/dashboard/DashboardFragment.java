@@ -25,6 +25,7 @@ import androidx.lifecycle.ViewModelProvider;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 import edu.hzuapps.salary2.KeyboardUtils;
@@ -55,6 +56,7 @@ public class DashboardFragment extends Fragment {
         etv_month = root.findViewById(R.id.dashboard_etv_month);
         etv_day = root.findViewById(R.id.dashboard_etv_day);
         etv_remark = root.findViewById(R.id.dashboard_etv_remark);
+        auto_day_set();
         btn_submit = root.findViewById(R.id.dashboard_btn_submit);
         btn_submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,6 +77,12 @@ public class DashboardFragment extends Fragment {
                 }
                 if(year.isEmpty() || month.isEmpty() || day.isEmpty()) {
                     Toast.makeText(root.getContext(), "日期不能为空!", Toast.LENGTH_LONG).show();
+                    return ;
+                }
+                Calendar cal=Calendar.getInstance();
+                int y=cal.get(Calendar.YEAR);
+                if(Integer.valueOf(year) < y-1 || Integer.valueOf(year) > y) {
+                    Toast.makeText(root.getContext(), "不能输入该年份!", Toast.LENGTH_LONG).show();
                     return ;
                 }
                 MyDBOpenHelper myDBOpenHelper = new MyDBOpenHelper(root.getContext(), "salary2.db", null, 1);
@@ -112,14 +120,24 @@ public class DashboardFragment extends Fragment {
                     Toast.makeText(root.getContext(), "提交成功!", Toast.LENGTH_LONG).show();
                     etv_stylename.setText("");
                     etv_number.setText("");
-                    etv_year.setText("");
-                    etv_month.setText("");
-                    etv_day.setText("");
+                    auto_day_set();
                     etv_remark.setText("");
                     KeyboardUtils.hideKeyboard(getActivity());
                 }
             }
         });
+    }
+
+    public void auto_day_set() {
+        Calendar cal=Calendar.getInstance();
+        int h=cal.get(Calendar.HOUR_OF_DAY);
+        if(h < 5) cal.add(Calendar.DATE,-1);
+        int y=cal.get(Calendar.YEAR);
+        int m=cal.get(Calendar.MONTH);
+        int d=cal.get(Calendar.DATE);
+        etv_year.setText(String.valueOf(y));
+        etv_month.setText(String.valueOf(m+1));
+        etv_day.setText(String.valueOf(d));
     }
 
 }
