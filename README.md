@@ -13,13 +13,12 @@ APP 采用 Android Studio 开发，相比于2020年做的第一代，添加了�
 ## 界面设计
 
 <div>
-    <img src="https://img-blog.csdnimg.cn/cf42dadf77ac42f3afe1f3305328b135.png?" width="25%" style="float:left">
-    <img src="https://img-blog.csdnimg.cn/9c63fb2ed7df41879edf54f7b2bafb03.png?" width="25%" style="float:left">
-    <img src="https://img-blog.csdnimg.cn/3f75f53f9fee44c78b4157ab86084450.png?" width="25%" style="float:left">
-    <img src="https://img-blog.csdnimg.cn/6ba38ed2f08b485ab45b3f446ac7fe51.png?" width="25%" style="float:left">
+    <img src="https://img-blog.csdnimg.cn/cf42dadf77ac42f3afe1f3305328b135.png?" width="24%" style="position:left">
+    <img src="https://img-blog.csdnimg.cn/9c63fb2ed7df41879edf54f7b2bafb03.png?" width="24%" style="positon:left">
+    <img src="https://img-blog.csdnimg.cn/3f75f53f9fee44c78b4157ab86084450.png?" width="24%" style="position:left">
+    <img src="https://img-blog.csdnimg.cn/6ba38ed2f08b485ab45b3f446ac7fe51.png?" width="24%" style="position:left">
 </div>
 
- 
 
 ## 数据库
 
