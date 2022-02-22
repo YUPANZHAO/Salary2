@@ -10,6 +10,10 @@ APP 采用 Android Studio 开发，相比于2020年做的第一代，添加了�
 * 能够随时修改某一款式的单价
 * 夜间过零点之后，早上五点前，录入数据时自动填入的日期仍视为昨天
 
+apk下载链接：https://www.pgyer.com/jxgW，或扫描下方二维码即可安装。
+
+<img src="https://img-blog.csdnimg.cn/fd024a743d924c10ab414bb24af37c45.png" style="float:left" width="15%">
+
 ## 界面设计
 
 <div>
